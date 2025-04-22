@@ -1,0 +1,56 @@
+name: touch_me
+description: "A new Flutter project."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.4 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  get: ^4.6.6
+  smooth_page_indicator: ^1.2.0+3
+  flutter_svg: ^2.0.17
+  # carousel_slider: 4.2.0
+  
+
+  table_calendar: ^3.2.0
+  flutter_rating_bar: ^4.0.1
+  shared_preferences: ^2.3.3
+  uuid: ^3.0.6
+  flutter_native_splash: ^2.4.1
+  carousel_slider: ^5.0.0
+  google_maps_flutter: ^2.12.1
+
+
+
+
+
+flutter_native_splash:
+  android: true
+  ios: true
+  web: true
+  background_image: assets/images/Splash.png
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/services/
+    - assets/images/special/
+    - assets/images/portfolio/
+    - assets/images/admin/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
