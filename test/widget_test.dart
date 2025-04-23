@@ -1,27 +1,31 @@
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:touch_me/main.dart';
+
+import 'package:newtouchme/main.dart';
+
 
 void main() {
-  testWidgets('Onboarding screen shows first title',
-      (WidgetTester tester) async {
-    await tester.pumpWidget(const TouchMeApp());
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
 
-    // Check if the first onboarding title is present
-    expect(
-      find.text(
-          'Timeless Sophistication,\nEach Moment Transcends Expectations'),
-      findsOneWidget,
-    );
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
 
-    // Tap the "Continue" button
-    await tester.tap(find.text('Continue'));
-    await tester.pumpAndSettle();
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
 
-    // Check if second onboarding screen appears
-    expect(
-      find.text('Where Tranquility Meets Luxury,\nOne Treatment at a Time.'),
-      findsOneWidget,
-    );
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
   });
 }

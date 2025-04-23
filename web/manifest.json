@@ -1,6 +1,6 @@
 {
-    "name": "touch_me",
-    "short_name": "touch_me",
+    "name": "updated_touchme",
+    "short_name": "updated_touchme",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
